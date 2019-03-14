@@ -2,9 +2,6 @@ variable "key_name" {}
 
 variable "ssh_key_private" {}
 
-variable "python_interpreter"  {}
-
-
 variable "region" {
     description = "AWS region."
     default = "us-east-2"
@@ -48,5 +45,9 @@ variable "sg_name" {
     description = "Name of security group to be created."
     default = "app-service"
   
+}
+
+variable "python_interpreter" {
+    description = "Python version for Ansible to use."
 }
 
