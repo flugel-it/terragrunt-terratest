@@ -1,5 +1,5 @@
 # nodered-ansible
-Technical assessment for flugel.it. Provision nodered instance using Ansible.
+Provisions a node-red instance in an AWS EC2 instance. 
 
 ## Using Vagrant.
 - To test, clone repo and run vagrant up --provider=docker.
