@@ -49,5 +49,6 @@ variable "sg_name" {
 
 variable "python_interpreter" {
     description = "Python version for Ansible to use."
+    default = "ansible_python_interpreter=/usr/bin/python3"
 }
 
