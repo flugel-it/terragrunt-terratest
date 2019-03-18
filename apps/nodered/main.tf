@@ -70,8 +70,3 @@ module "security_group" {
     }
   ]
 }
-
-output "ec2_public_ip" {
-  description = "Node-RED public IP."
-  value = "${aws_instance.nodered_instance.public_ip}"
-}
