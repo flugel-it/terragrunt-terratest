@@ -17,12 +17,12 @@ func validateNodeRedVersion(status int, body string) bool {
 	return status == 200 && version == "0.20.2"
 }
 
-// An example of how to test the simple Terraform module in examples/terraform-basic-example using Terratest.
+// Test node-red terraform module using Terratest.
 func TestHttpNodeRed(t *testing.T) {
 	t.Parallel()
 
 	terraformOptions := &terraform.Options{
-		// The path to nodered terraform
+		// The path to nodered terraform module.
 		TerraformDir: "../../apps/nodered",
 
 		NoColor: true,
@@ -31,7 +31,7 @@ func TestHttpNodeRed(t *testing.T) {
 	// Run `terraform destroy` after resources are created
 	defer terraform.Destroy(t, terraformOptions)
 
-	// Rrun `terraform init` and `terraform apply`
+	// Run `terraform init` and `terraform apply`
 	terraform.InitAndApply(t, terraformOptions)
 
 	instanceURL := terraform.Output(t, terraformOptions, "nodered_settings_url")
