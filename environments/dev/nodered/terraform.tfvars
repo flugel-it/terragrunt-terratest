@@ -1,6 +1,6 @@
 terragrunt = {
     terraform {
-        source = "../apps//nodered"
+        source = "../../../modules//nodered"
     }
 }
 

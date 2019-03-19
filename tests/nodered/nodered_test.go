@@ -14,16 +14,16 @@ func validateNodeRedVersion(status int, body string) bool {
 	json.Unmarshal([]byte(body), &result)
 	version := result["version"]
 
-	return status == 200 && version == "0.20.2"
+	return status == 200 && version == "0.20.1"
 }
 
-// Test node-red terraform module using Terratest.
+// HTTP test for nodered deployment.
 func TestHttpNodeRed(t *testing.T) {
 	t.Parallel()
 
 	terraformOptions := &terraform.Options{
 		// The path to nodered terraform module.
-		TerraformDir: "../../apps/nodered",
+		TerraformDir: "../../modules/nodered",
 
 		NoColor: true,
 	}

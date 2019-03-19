@@ -1,12 +1,6 @@
 # nodered-ansible
 Provisions a node-red instance in an AWS EC2 instance. 
 
-## Using Vagrant.
-- To test, clone repo and run vagrant up --provider=docker.
-
-- To access nodered, localhost:1880
-
-- To destroy, run vagrant destroy.
 
 ## Using Terraform with AWS as provider.
 
@@ -26,18 +20,18 @@ $ export ANSIBLE_HOST_KEY_CHECKING=False
 python_interpreter = ""
 ```
 
-3. To run you need to execute:
+3. To run, execute the ff:
 
 ```bash
 $ terraform init 
-$ terraform plan -var-file="config.tfvars"
-$ terraform apply -var-file="config.tfvars"
+$ terraform plan
+$ terraform apply
 ```
 4. If successful the, output will be ec2 instance' public ip. 
 To access the provisioned node-red, use <ec2_public_ip>:1880/
 
-5. To destroy you need to execute:
+5. To destroy, execute the ff:
 
 ```bash
-$ terraform destroy -var-file="config.tfvars"
+$ terraform destroy
 ```
