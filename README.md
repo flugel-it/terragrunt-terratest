@@ -6,9 +6,9 @@ This is an example on how to use Terragrunt and Terratest on existing terraform 
 Both libraries were developed at Gruntwork.
 
 ### Pre-requisites
-- [terraform] [terraform_tool] v0.11.12
-- [terragrunt] [terragrunt_tool] v0.18.1
-- [terratest] [terratest_tool]
+- [terraform][terraform_tool] v0.11.12
+- [terragrunt][terragrunt_tool] v0.18.1
+- [terratest][terratest_tool]
 - ansible 2.7.8
 - golang go1.12
 
