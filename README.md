@@ -73,11 +73,11 @@ terragrunt output
 terragrunt destroy
 ```
 
-See [Terragruntrepo][terragrunt_tool] for more info.
+See [Terragrunt repo][terragrunt_tool] for more info.
 
 #### Run Terragrunt for a dev deployment of a nodered module.
 
-1. Download terragrunt files here[terragrunt_tool].
+1. Download terragrunt files [here][terragrunt_tool].
 
 2. To deploy, run the ff terragrunt commands.
 ```bash
