@@ -126,6 +126,6 @@ go get github.com/gruntwork-io/terratest/modules/http-helper
 cd tests/nodered
 go test -v -run TestHttpNodeRed
 ```
-[terraform_tool]:https://github.com/gruntwork-io/terragrunt
+[terragrunt_tool]:https://github.com/gruntwork-io/terragrunt
 [terratest_tool]:https://github.com/gruntwork-io/terratest
 [terraform_tool]:https://www.terraform.io/docs/index.html
