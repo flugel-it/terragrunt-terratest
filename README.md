@@ -23,7 +23,11 @@ $ export ANSIBLE_HOST_KEY_CHECKING=False
 
 ### Terragrunt
 
-One of the motivation for Terragrunt is to provide a way to keep Terraform code DRY. The idea is to define the infrastructure code once and expose input variables that can be use to define different environments (e.g. prod, qa, stage, dev).
+One of the motivation for Terragrunt is to provide a way to keep Terraform code DRY. The idea is to define the infrastructure code once and expose input variables that can be use to define different environments (e.g. prod, qa, stage, dev). Terragrunt also provides the following benefits:
+
+- Keeping CLI flags and Remote state configuration DRY
+- Run terraform commands on multiple modules
+- Using multiple AWS accounts
 
 In this setup the nodered .tf files along with the ansible script are define under modules and a dev environment is define by a single .tfvars file.
 
