@@ -14,7 +14,7 @@ resource "aws_instance" "nodered_instance" {
   }
 
   provisioner "remote-exec" {
-    inline = ["sudo apt-get update"]
+    inline = ["lsb_release -a"]
 
     connection {
       type        = "ssh"

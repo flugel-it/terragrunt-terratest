@@ -23,6 +23,8 @@ before_script:
   - unzip terraform_0.11.12_linux_amd64.zip
   - sudo mv terraform /usr/local/bin/
   - sudo apt install ansible
+  - go get github.com/gruntwork-io/terratest/modules/terraform
+  - go get github.com/gruntwork-io/terratest/modules/http-helper
 
 script:
   - go test ./... -v -run TestHttpNodeRed

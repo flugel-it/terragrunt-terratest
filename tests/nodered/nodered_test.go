@@ -14,7 +14,7 @@ func validateNodeRedVersion(status int, body string) bool {
 	json.Unmarshal([]byte(body), &result)
 	version := result["version"]
 
-	return status == 200 && version == "0.20.1"
+	return status == 200 && version == "0.20.3"
 }
 
 // HTTP test for nodered deployment.
