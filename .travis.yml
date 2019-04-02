@@ -17,6 +17,9 @@ git:
 notifications:
   email: false
 
+env:
+  - ANSIBLE_HOST_KEY_CHECKING=False
+
 before_script:
   - sudo apt-get install unzip
   - wget https://releases.hashicorp.com/terraform/0.11.12/terraform_0.11.12_linux_amd64.zip
@@ -25,6 +28,7 @@ before_script:
   - sudo apt install ansible
   - go get github.com/gruntwork-io/terratest/modules/terraform
   - go get github.com/gruntwork-io/terratest/modules/http-helper
+  - export ANSIBLE_HOST_KEY_CHECKING=False
 
 script:
   - go test ./... -v -run TestHttpNodeRed
