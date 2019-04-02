@@ -39,7 +39,6 @@
       name: node-red
       global: yes
       production: yes
-      state: present
   
   - name: Run Node RED
     shell: forever start /usr/bin/node-red
