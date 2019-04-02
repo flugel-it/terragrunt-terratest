@@ -1,0 +1,29 @@
+dist: xenial
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_77bcea58f362_key -iv $encrypted_77bcea58f362_iv
+  -in terraform-test.pem.enc -out ~/.ssh/terraform-test.pem -d
+- eval "$(ssh-agent -s)"
+- chmod 600 ~/.ssh/terraform-test.pem
+- ssh-add ~/.ssh/terraform-test.pem
+
+language: go
+go:
+  - 1.12
+
+git:
+  depth: 1
+
+notifications:
+  email: false
+
+before_script:
+  - sudo apt-get install unzip
+  - wget https://releases.hashicorp.com/terraform/0.11.12/terraform_0.11.12_linux_amd64.zip
+  - unzip terraform_0.11.12_linux_amd64.zip
+  - sudo mv terraform /usr/local/bin/
+  - sudo apt install ansible
+
+script:
+  - cd /tests/nodered
+  - go test -v -run TestHttpNodeRed
