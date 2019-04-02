@@ -25,5 +25,4 @@ before_script:
   - sudo apt install ansible
 
 script:
-  - cd /tests/nodered
-  - go test -v -run TestHttpNodeRed
+  - go test ./... -v -run TestHttpNodeRed
